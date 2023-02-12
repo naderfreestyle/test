@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelloWorld</title>
+</head>
+<body>
+    <h1 id="HelloWorld">HelloWorld</h1>
+
+    <ul>
+        <li>amazing</li>
+        <li>amazing</li>
+        <li>amazing</li>
+    </ul>
+    
+
+
+    <script>
+         const ul = document.createElement("ul");
+         const li = document.createElement("li");
+         li.innerText = "HelloWorld";
+         let body = document.body
+         ul.appendChild(li);
+         body.appendChild(ul);
+         
+         li.remove()
+         ul.appendChild(li);
+
+         const helloWorld = document.querySelector("#HelloWorld");
+         helloWorld.innerText = "HelloUniverse";
+          
+         helloWorld.classList.add("greeting");
+         helloWorld.setAttribute("hello","hello");
+
+         console.log(helloWorld.getAttribute("hello"))
+
+         helloWorld.style.color = "red"
+
+        //  event listener
+
+        helloWorld.addEventListener("click", function(e){
+            helloWorld.style.color = "green"
+            helloWorld.classList.toggle("show");
+        })
+
+        const allLis = document.querySelectorAll("li");
+
+        allLis.forEach(li=>{
+            li.style.color = "blue"
+        })
+
+    </script>
+</body>
+</html>
